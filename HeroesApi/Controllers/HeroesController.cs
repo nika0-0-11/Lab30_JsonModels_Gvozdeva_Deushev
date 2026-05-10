@@ -68,7 +68,7 @@ public ActionResult GetSerialize() {
     string serialized = JsonSerializer.Serialize(hero, options);
     var deserialized = JsonSerializer.Deserialize<Hero>(serialized, options);
     return Ok(new {
-        serializeJson = serialized,
+        serializedJson = serialized,
         deserializedObject = deserialized,
         internalNotesAfterDeserialize = deserialized?.InternalNotes ?? "null - поле было проигнорировано"
     });
